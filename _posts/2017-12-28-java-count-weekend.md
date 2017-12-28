@@ -3,10 +3,9 @@ layout: post
 title: "Calendar class를 이용한 주말 일 수 구하기"
 tags: "java","Calendar"
 comments: true
-categories : Calendar
+categories : Jekyll Calendar
 ---
 # Java : Calendar class를 이용한 주말 일 수 구하기
-
 
 ### 문제 : 
 휴가일수 데이터를 다른 서비스와 연동하려고 한다. 휴가일 수 이다 보니 주말같은 공휴일이 중간에 끼는 경우 체크해서 빼줘야 한다. 
