@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Calendar class를 이용한 주말 일 수 구하기"
-tags: "java","Calendar"
+title: "Java Calendar class를 이용한 주말 일 수 구하기"
+tags: "java"
 comments: true
-categories : Jekyll Calendar
+categories : Jekyll Disqus 
 ---
 # Java : Calendar class를 이용한 주말 일 수 구하기
 
