@@ -2,7 +2,9 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $base-font-family: 'Hanna','Malgun Gothic',"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$base-font-family : 'Hanna','Malgun Gothic', !default;
+$base-font-family : 'Jeju Gothic','Malgun Gothic';
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -47,5 +49,6 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "minima/screen"
 ;

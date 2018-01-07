@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Java Calendar class를 이용한 주말 일 수 구하기"
+title: "[Java] Calendar class를 이용한 주말 일 수 구하기"
 tags: "java"
 comments: true
 categories : Jekyll  
@@ -21,7 +21,6 @@ import java.util.Date;
 
 public int findWeekendCnt(String startdate, String enddate) throws Exception {
     int weekendCnt = 0;
-    Calendar.getInstance().setTime( new SimpleDateFormat("yyyyMMdd").parse(startdate) );
     Date endDate = new SimpleDateFormat("yyyyMMdd").parse(enddate);
     Date startDate = new SimpleDateFormat("yyyyMMdd").parse(startdate);
     Calendar startCal = Calendar.getInstance();

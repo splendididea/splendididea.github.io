@@ -6,17 +6,30 @@ layout: default
 
   {{ content }}
 
-  <h1 class="page-heading">Posts</h1>
+  <!--<h1 class="page-heading">Posts</h1>-->
   
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
+        {% assign date_format = site.minima.date_format | default: "%d %b %Y" %}
         <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
+        <div class="post-list-date">
+            <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
+           
+        </div>
+        <div class="post-list-content multi_cut">
+          <section class="post-except">
+            <p>
+              {{post.content}}
+            </p>
+            <a href="{{ post.url | relative_url }}" class="read-more" ></a>
+          </section>
+        </div>
+        <div class="post-list-information">
+            <span class="post-meta"> {{post.author}}  on {{ post.tags }}   <time class="post-date">  {{ post.date | date: date_format }} </time> </span>
+        </div>
       </li>
     {% endfor %}
   </ul>
