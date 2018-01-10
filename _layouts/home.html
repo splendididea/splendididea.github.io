@@ -3,9 +3,7 @@ layout: default
 ---
 
 <div class="home">
-
   {{ content }}
-
   <!--<h1 class="page-heading">Posts</h1>-->
   
   <ul class="post-list">
@@ -17,23 +15,21 @@ layout: default
         </h2>
         <div class="post-list-date">
             <!-- <span class="post-meta">{{ post.date | date: date_format }}</span> -->
-           
         </div>
         <div class="post-list-content multi_cut">
           <section class="post-except">
-            <p>
-              {{post.content}}
+            <p> 
+              {{ post.content |  strip_html | textilize }}
             </p>
             <a href="{{ post.url | relative_url }}" class="read-more" ></a>
           </section>
         </div>
         <div class="post-list-information">
-            <span class="post-meta"> {{post.author}}  on {{ post.tags }}   <time class="post-date">  {{ post.date | date: date_format }} </time> </span>
+            <span class="post-meta">{{post.author}} on {{ post.tags }}   <time class="post-date">  {{ post.date | date: date_format }} </time> </span>
         </div>
       </li>
     {% endfor %}
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
 </div>

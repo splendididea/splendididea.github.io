@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+// @include font-face(Moebius, font/Moebius);
 // Define defaults for each variable.
 
 // $base-font-family: 'Hanna','Malgun Gothic',"Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -52,3 +53,9 @@ $on-laptop:        800px !default;
   "minima/syntax-highlighting",
   "minima/screen"
 ;
+
+@font-face {
+	font-family: "Moebius";
+	src: 
+		 url("fonts/Moebius.ttf") format("truetype");
+}

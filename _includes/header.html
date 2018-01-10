@@ -1,21 +1,33 @@
 <header class="site-header" role="banner">
     <div class="site-wrapper">
-        <header class="main-header " style="background-image: url(/content/images/2017/09/parker-byrd-139348.jpg)">
+
+        {% if page.imgpath %}
+        <header class="main-header" style="background-image: url({{ page.imgpath }})">
+        {% else %}
+        <header class="main-header">
+        {% endif %}
           {% assign default_paths = site.pages | map: "path" %}
           {% assign page_paths = site.header_pages | default: default_paths %}
-          <!-- <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
-
-            <!-- <nav class="main-nav overlay clearfix">
-                <a class="blog-logo" href="http://splendididea.github.io">Main</a>
-                <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-            </nav> -->
             <div class="vertical">
                 <div class="main-header-content inner">
-                    <h1 class="page-title">Think Coding</h1>
-                    <!-- <h2 class="page-description">I develop 🌐 websites, ⚛️ apps and 🔨 tools.</h2> -->
+                    {% if page.title %}
+                    <h1 class="page-title">{{ page.title | escape }} </h1>
+                    <span class="page-information">
+                        <i class="fa fa-pencil"></i>{{ page.author }}
+                        <i class="fa fa-tags"></i>{{ page.tags }}
+                        <i class="fa fa-calendar"></i>
+                        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                        {{ page.date | date: date_format }}
+                    </span>
+                    {% else %}
+                    <h1 class="page-title">{{ site.title | escape }} </h1>
+                    <h2 class="page-description">thoughts, ideas repository</h2>
+                    {% endif %}
                 </div>
             </div>
-            <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+            <a class="scroll-down" href="#content">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
         </header>
         </main>
     </div>
